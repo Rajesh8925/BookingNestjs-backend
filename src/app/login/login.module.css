@@ -1,0 +1,169 @@
+.pageWrapper {
+  min-height: 100vh;
+  background-image: url("./OIP.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  padding: 40px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.28);
+
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.subtitle {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 24px;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
+.input {
+  width: 90%;
+  padding: 14px;
+  margin-top: 14px;
+  max-width: 500px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.45);
+
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.input::placeholder {
+  color: rgba(255,255,255,0.85);
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(80, 190, 255, 0.8);
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 0 8px rgba(80,190,255,0.6);
+}
+
+.passwordWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.eyeIcon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.eyeIcon:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.error {
+  background: rgba(255, 50, 50, 0.35);
+  color: #ffdddd;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+.button {
+  display: block;           /* ensures margin and width behave correctly */
+  width: 100%;              /* full width of parent (card) */
+  box-sizing: border-box;   /* includes padding in width */
+  padding: 14px;
+  margin-top: 29px;
+  
+
+  border: none;
+  border-radius: 10px;
+
+  background: rgba(26, 115, 232, 0.88);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.36);
+
+  
+}
+
+
+.button:hover {
+  background: rgba(26, 115, 232, 0.98);
+  transform: scale(1.02);
+}
+
+.bottomText {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.link {
+  color: #aad4ff;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 28px;
+    border-radius: 16px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

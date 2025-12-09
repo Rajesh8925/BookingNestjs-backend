@@ -1,0 +1,143 @@
+/* ---- PAGE WRAPPER ---- */
+.pageWrapper {
+  min-height: 100vh;
+  background-image: url("./OIP.webp");/* your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+/* ---- CARD ---- */
+.card {
+  width: 100%;
+  max-width: 380px;
+  padding: 40px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.28);
+
+  color: #fff;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ---- HEADING ---- */
+.heading {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+/* ---- INPUT ---- */
+.input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 14px;
+
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.45);
+
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.input::placeholder {
+  color: rgba(255,255,255,0.85);
+}
+
+.input:focus {
+  outline: none;
+  border-color: rgba(80, 190, 255, 0.8);
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 0 8px rgba(80,190,255,0.6);
+}
+
+/* ---- ERROR ---- */
+.error {
+  background: rgba(255, 50, 50, 0.35);
+  color: #ffdddd;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+}
+
+/* ---- BUTTON ---- */
+.button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-top: 24px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: rgba(26, 115, 232, 0.88);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.36);
+}
+
+.button:hover {
+  background: rgba(26, 115, 232, 0.98);
+  transform: scale(1.02);
+}
+
+/* ---- FOOTER TEXT ---- */
+.footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.link {
+  color: #aad4ff;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.link:hover {
+  color: #fff;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 480px) {
+  .card {
+    padding: 28px;
+    border-radius: 16px;
+  }
+
+  .heading {
+    font-size: 22px;
+  }
+}
+
+/* ---- ANIMATION ---- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
